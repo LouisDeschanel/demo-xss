@@ -16,16 +16,15 @@ import { Options, Vue } from 'vue-class-component';
     msg: String,
   },
   mounted() {
-    this.$nextTick(function(this: Explanation) {
-      if (this.$route.fullPath == "/explanation/consequence") {
+    this.$nextTick(function (this: any) {
+      if (this.$route.fullPath === '/explanation/consequence') {
         this.$emit('consequence');
       }
     });
-  }
+  },
 })
 export default class Explanation extends Vue {
   msg!: string
-  
 }
 </script>
 

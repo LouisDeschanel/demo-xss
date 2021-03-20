@@ -27,13 +27,13 @@ const routes: Array<RouteRecordRaw> = [
         name: 'Consequence',
         component: Consequence,
       },
-    ]
+    ],
   },
   {
     path: '/demo',
     name: 'Demonstration',
-    component: Demo, 
-  }
+    component: Demo,
+  },
 ];
 
 const router = createRouter({

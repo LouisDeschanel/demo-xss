@@ -17,19 +17,17 @@ import { Options, Vue } from 'vue-class-component';
     msg: String,
   },
   data() {
-    return ({consequenceBool : false});
+    return ({ consequenceBool: false });
   },
   methods: {
     consequence() {
       this.consequenceBool = true;
-      console.log(this.consequenceBool);
-    }
-  }
+    },
+  },
 })
 
 export default class App extends Vue {
   msg!: string
-  
 }
 </script>
 

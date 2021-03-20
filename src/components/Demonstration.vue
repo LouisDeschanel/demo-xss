@@ -19,6 +19,7 @@
     </div>
     <input style="margin-top: 10%" value="<script>alert('lol')</script>">
     <button @click="htmlXSS = true">Post</button>
+    <button @click="showXSSAlert()">Actualize</button>
   </div>
 </div>
 </template>
@@ -36,6 +37,13 @@ import { Options, Vue } from 'vue-class-component';
       htmlXSS: false,
     });
   },
+  methods: {
+    showXSSAlert() {
+      if (this.htmlXSS) {
+        alert('lol');
+      }
+    },
+  },
 })
 export default class Demo extends Vue {
   msg!: string
@@ -50,17 +58,24 @@ export default class Demo extends Vue {
   border: 3px #42b983 solid;
   justify-content: space-between;
   width: 38%;
+  margin-left: 31%;
+  border-radius: 2rem;
 }
 
 #forum-html {
   border-left: #42b983 3px solid;
   padding-left: 15%;
   margin-right: 15%;
+  margin-left: 5%;
 }
 
 #forum-code {
   white-space: pre;
   text-align: start !important;
+  padding-top: 6%;
+  padding-left: 2%;
+  padding-bottom: 5%;
+  padding-right: 2%;
 }
 
 .forum-post {

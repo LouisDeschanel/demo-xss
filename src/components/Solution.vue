@@ -3,7 +3,7 @@
     <h1 class="strong"> How to Solve this vulnerability </h1>
     <p style="font-family: PT Sans,Helvetica,Arial,sans-serif"> Actually, the languages
       used on backend server integrate functions to avoid <span class="strong">XSS</span>.<br>
-    These functons make it possible to sanitize user's inputs by turning them
+    These functions make it possible to sanitize user's inputs by turning them
     into string without being able to be interpreted as HTML </p><br>
      <div> </div>
      <div class="sanitize-img">

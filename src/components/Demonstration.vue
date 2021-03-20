@@ -19,7 +19,7 @@
     </div>
     <input style="margin-top: 10%" value="<script>alert('lol')</script>">
     <button @click="htmlXSS = true">Post</button>
-    <button @click="showXSSAlert()">Actualize</button>
+    <button @click="showXSSAlert()">Refresh</button>
   </div>
 </div>
 </template>

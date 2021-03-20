@@ -1,9 +1,9 @@
 <template>
 <div id="demo" class="main-component">
   <div id="forum-code">
-  {{ htmlContent + ((false) ?
-  '\n\n\n' :
-  '\n    <div class="forum-post">\n        <script>alert(\'lol\')><\/script>\n    </div>\n</div>')}}
+  {{ htmlContent + ((htmlXSS) ?
+  '    <div class="forum-post">\n        <script>alert(\'lol\')><\/script>\n    </div>\n</div>'
+  : '</div>\n\n\n\n')}}
    </div>
   <div id="forum-html">
     <h1>Forum</h1>
@@ -14,11 +14,11 @@
         <div class="forum-post">
             Hi, how are you ?
         </div>
-        <!--<div class="forum-post">
-        </div>-->
+        <div v-if="htmlXSS" class="forum-post">
+        </div>
     </div>
     <input style="margin-top: 10%" value="<script>alert('lol')</script>">
-    <button>Post</button>
+    <button @click="htmlXSS = true">Post</button>
   </div>
 </div>
 </template>
@@ -32,7 +32,8 @@ import { Options, Vue } from 'vue-class-component';
   },
   data() {
     return ({
-      htmlContent: '<div>\n    <h1>\n        Forum\n    </h1>\n    <div id="forum">\n        <div class="forum-post">\n            Hello\n        </div>\n        <div class="forum-post">\n            Hi\n        </div>\n    </div>\n</div>',
+      htmlContent: '<div>\n    <h1>\n        Forum\n    </h1>\n    <div id="forum">\n        <div class="forum-post">\n            Hello\n        </div>\n        <div class="forum-post">\n            Hi\n        </div>\n    </div>\n',
+      htmlXSS: false,
     });
   },
 })

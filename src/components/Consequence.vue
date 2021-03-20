@@ -1,16 +1,16 @@
 <template>
   <div id="consequence" class="main-component">
-    <p> La base de données va renvoyer la variable lors de l'actualisation<br>
-    Elle sera alors insérée dans la page et interprétée en tant que membre de la
-    page HTML (DOM) à cause des balises<br>
-    Dans le cas d'une balise contenant du script JS,
-    ce dernier va être exécuté sur le navigateur du visteur.<br> </p>
+    <p> The <span class="strong">database</span> will return the variable on refresh<br>
+    It will be inserted into the web page and interpreted as a member of the
+    <span class="strong">DOM</span> (HTML Code)<br>
+    In the case of a tag containing <span class="strong">Javascript</span>,
+    the code will be executed on the visitor's browser.<br> </p>
     <img style="width: 50%" alt="Get XSS attack schema" src="../assets/XSS_back.png"> <br>
-    <p> Un attaquant n'aura qu'ầ ajouter un code permettant de rediriger l'utilisateur sur son
-      serveur avec ses cookies pour les récupérer et les utiliser.<br>
-    Cette technique peut aussi être utiliser dans le cadre du defacing
-     (la modification de la presentation d'un site web) afin d'inserer des elements visuels<br>
-    Bien d'autres manière de procéder existe, je vous invite à consulter la page de l'OWASP à ce sujet : <a href="https://owasp.org/www-community/xss-filter-evasion-cheatsheet">Here</a> <br> </p>
+    <p> A hacker will only have to add a code that will redirect
+      the <span class="strong">user's cookies</span> on his own server.<br>
+    The XSS can also be used to  <span class="strong">deface</span>
+     (Visual modification on a website)<br>
+    You can exploit XSS in others ways, I suggest you to consult the  <span class="strong">OWASP</span> website to improve your knowledge : <a href="https://owasp.org/www-community/xss-filter-evasion-cheatsheet">Here</a> <br> </p>
   </div>
 </template>
 

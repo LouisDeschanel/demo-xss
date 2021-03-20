@@ -58,8 +58,9 @@ export default class Demo extends Vue {
   border: 3px #42b983 solid;
   justify-content: space-between;
   width: 38%;
-  margin-left: 31%;
+  margin: 0 auto;
   border-radius: 2rem;
+  margin-top: 5%
 }
 
 #forum-html {

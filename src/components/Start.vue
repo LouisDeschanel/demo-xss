@@ -1,17 +1,17 @@
 <template>
 <div id="start" class="main-component">
-    <h1 class="strong"> XSS Stocké </h1>
-    <p style="font-family: PT Sans,Helvetica,Arial,sans-serif"> Bonjour à tous, aujourd'hui
-      je vais tenter de vous expliquer par l'exemple
-     une des failles web les plus connues : </p>
+    <h1 class="strong"> Stored XSS </h1>
+    <p style="font-family: PT Sans,Helvetica,Arial,sans-serif"> Hi everyone,
+     today i will try to explain to you one of the most famous web vulnerabilities:
+     </p>
      <div> </div>
-     <div style="margin-bottom: 2%" class="strong"> La faille XSS </div>
+     <div style="margin-bottom: 2%" class="strong"> The XSS </div>
      <img style="width: 45%; margin-bottom: 2%"
      src="https://www.wpexplorer.com/wp-content/uploads/wordpress-cross-site-scripting-guide-prevention.png"><br>
-     La <span class="strong">XSS</span> se décline sous plusieurs formes :
-     <span class="strong">Réfléchie</span>, <span class="strong">Mutée</span> et autres. <br>
-     J'expliquerais ici seulement la <span class="strong">Stockée</span>, étant la plus simple à
-     comprendre
+     The <span class="strong">XSS</span> comes in several forms :
+     <span class="strong">Reflected</span>, <span class="strong">Mutated</span> and others. <br>
+     I chose to explain only the<span class="strong">
+       stored</span> because it's the easiest to understand.
 </div>
 </template>
 
@@ -23,7 +23,7 @@ import { Options, Vue } from 'vue-class-component';
     msg: String,
   },
 })
-export default class HelloWorld extends Vue {
+export default class Start extends Vue {
   msg!: string
 }
 </script>

@@ -1,14 +1,15 @@
 <template>
   <div id="cause" class="main-component">
-    <p>Le but d'une
+    <p>The purpose of a
       <span class="strong">XSS</span>
-      va être d'ajouter (ou de modifier) du contenu à une page une page web.<br>
+      is to add or modify some content on a website<br>
 
-    Le mécanisme explicant cette faille est assez simple à comprendre. <br>
-    Elle commence avec une variable envoyé à un serveur,
-    tel un formulaire pour ajouter un post sur un forum par exemple.<br>
-    Lorsque cette variable va être envoyer au serveur
-    elle va être stocker en base de données <br> </p>
+    It's pretty easy to understand how this vulnerability works <br>
+    It starts when a <span class="strong">user's input </span> sent to a
+    <span class="strong">backend server</span>,
+    like a form to add a post on a forum for example.<br>
+    When the server receives this variable, it will store it in a <span class="strong">
+      database</span> <br> </p>
     <img style="width: 50%" alt="Send XSS attack schema" src="../assets/XSS_send.png"> <br>
 
   </div>

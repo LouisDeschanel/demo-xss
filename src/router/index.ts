@@ -4,6 +4,7 @@ import Explanation from '../components/Explanation.vue';
 import Cause from '../components/Cause.vue';
 import Consequence from '../components/Consequence.vue';
 import Demo from '../components/Demonstration.vue';
+import Solution from '../components/Solution.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -33,6 +34,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/demo',
     name: 'Demonstration',
     component: Demo,
+  },
+  {
+    path: '/solution',
+    name: 'Solution',
+    component: Solution,
   },
 ];
 

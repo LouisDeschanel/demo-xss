@@ -2,11 +2,12 @@
   <div id="background-top">
   </div>
   <div id="nav">
-    <router-link to="/">Présentation</router-link> |
-    <router-link to="/explanation">Explication</router-link> |
-    <router-link :class="{ underline : consequenceBool }" to="/demo">Demonstration</router-link>
+    <router-link to="/">Presentation</router-link> |
+    <router-link to="/explanation">Explanation</router-link> |
+    <router-link to="/demo">Demo</router-link> |
+    <router-link to="/solution">Solution</router-link>
   </div>
-  <router-view @consequence="consequence"/>
+  <router-view />
 </template>
 
 <script lang="ts">
@@ -15,14 +16,6 @@ import { Options, Vue } from 'vue-class-component';
 @Options({
   props: {
     msg: String,
-  },
-  data() {
-    return ({ consequenceBool: false });
-  },
-  methods: {
-    consequence() {
-      this.consequenceBool = true;
-    },
   },
 })
 

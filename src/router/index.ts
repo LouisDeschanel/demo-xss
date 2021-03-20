@@ -14,19 +14,19 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/explanation',
     name: 'Explanation',
-    component: Explanation, 
+    component: Explanation,
 
     children: [
-    {
-      path: '',
-      name: 'Cause',
-      component: Cause, 
-    },
-    {
-      path: 'consequence',
-      name: 'Consequence',
-      component: Consequence 
-    },
+      {
+        path: '',
+        name: 'Cause',
+        component: Cause,
+      },
+      {
+        path: 'consequence',
+        name: 'Consequence',
+        component: Consequence,
+      },
     ]
   },
   {

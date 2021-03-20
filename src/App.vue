@@ -4,10 +4,34 @@
   <div id="nav">
     <router-link to="/">Présentation</router-link> |
     <router-link to="/explanation">Explication</router-link> |
-    <router-link to="/demo">Demonstration</router-link>
+    <router-link :class="{ underline : consequenceBool }" to="/demo">Demonstration</router-link>
   </div>
-  <router-view/>
+  <router-view @consequence="consequence"/>
 </template>
+
+<script lang="ts">
+import { Options, Vue } from 'vue-class-component';
+
+@Options({
+  props: {
+    msg: String,
+  },
+  data() {
+    return ({consequenceBool : false});
+  },
+  methods: {
+    consequence() {
+      this.consequenceBool = true;
+      console.log(this.consequenceBool);
+    }
+  }
+})
+
+export default class App extends Vue {
+  msg!: string
+  
+}
+</script>
 
 <style lang="scss">
 
@@ -50,10 +74,16 @@ body {
     color: #2c3e50;
     text-decoration: none;
 
-    &.router-link-exact-active {
+    &.router-link-exact-active, .router-link-active {
       color: white;
       text-decoration: underline;
     }
   }
 }
+
+.router-link-active {
+      color: white !important;
+      text-decoration: underline !important;
+}
+
 </style>
